@@ -28,8 +28,10 @@ public class DemoApplication {
         linkedList.add(20);
         linkedList.add(30);
 
-        System.out.println(linkedList.get(1));
-//        linkedList.print();
+        linkedList.delete(2);
+        linkedList.add(40);
+        linkedList.delete(1);
+        linkedList.print();
 
     }
 }

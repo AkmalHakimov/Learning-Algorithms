@@ -21,11 +21,34 @@ public class LinkedList {
         }
     }
 
-    public Integer get(int index) {
-        if (first == null) {
-            throw new IndexOutOfBoundsException();
-        }
+    public void delete(int index){
 
+        if(index==0){
+            first = first.getNext();
+            return;
+        }
+        int count = 0;
+        Node currentNode = first;
+
+        while (true) {
+            if(index-1 == count){
+                break;
+            }
+            count++;
+            currentNode = currentNode.getNext();
+
+            if(currentNode==null){
+                throw new IndexOutOfBoundsException();
+            }
+        }
+        Node afterNode = currentNode.getNext().getNext();
+        currentNode.setNext(afterNode);
+        if(afterNode==null){
+            last = currentNode;
+        }
+    }
+
+    public Integer get(int index) {
         int count = 0;
         Node currentNode = first;
         while (true) {
@@ -33,13 +56,12 @@ public class LinkedList {
                return currentNode.getValue();
            }
            count++;
-           currentNode = first.getNext();
+           currentNode = currentNode.getNext();
 
-           if(last==null){
-               break;
+           if(currentNode==null){
+               throw new IndexOutOfBoundsException();
            }
         }
-        return null;
     }
 
 
