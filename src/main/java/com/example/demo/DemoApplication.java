@@ -7,21 +7,29 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
+//
+//        ArrayList arrayList = new ArrayList();
+//
+//        arrayList.add(10);
+//        arrayList.add(20);
+//        arrayList.add(30);
+//        arrayList.add(40);
+//        arrayList.add(50);
+//        arrayList.add(60);
+//
+//        arrayList.delete(4);
+//
+//        arrayList.print();
+//
+//        System.out.println(arrayList.size());
 
-        ArrayList arrayList = new ArrayList();
+        LinkedList linkedList = new LinkedList();
+        linkedList.add(10);
+        linkedList.add(20);
+        linkedList.add(30);
 
-        arrayList.add(10);
-        arrayList.add(20);
-        arrayList.add(30);
-        arrayList.add(40);
-        arrayList.add(50);
-        arrayList.add(60);
-
-        arrayList.delete(4);
-
-        arrayList.print();
-
-        System.out.println(arrayList.size());
+        System.out.println(linkedList.get(1));
+//        linkedList.print();
 
     }
 }
